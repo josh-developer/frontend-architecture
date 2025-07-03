@@ -1,0 +1,57 @@
+{
+  "name": "@frontend-architect-course/ng-ui-elements",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/shared-ui/fesm2022/shared-ui.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/shared-ui/fesm2022/shared-ui.mjs",
+      "types": "./dist/shared-ui/index.d.ts"
+    }
+  },
+  "files": [
+    "dist/shared-ui/"
+  ],
+  "scripts": {
+    "build": "ng build shared-ui",
+    "postinstall": "echo '👉 Please install required Angular peer deps: @angular/core @angular/common @angular/platform-browser @angular/elements'"
+  },
+  "peerDependencies": {
+    "@angular/common": "^20.0.0",
+    "@angular/core": "^20.0.0",
+    "@angular/platform-browser": "^20.0.0",
+    "@angular/elements": "^20.0.0"
+  },
+  "dependencies": {
+    "document-register-element": "^1.14.10"
+  },
+  "devDependencies": {
+    "@angular/cli": "^20.0.5",
+    "@angular/compiler": "^20.0.0",
+    "@angular/compiler-cli": "^20.0.0",
+    "@angular/forms": "^20.0.0",
+    "@angular/platform-browser-dynamic": "^20.0.0",
+    "@angular/router": "^20.0.0",
+    "ng-packagr": "^20.0.0",
+    "typescript": "~5.8.2"
+  },
+  "prettier": {
+    "overrides": [
+      {
+        "files": "*.html",
+        "options": {
+          "parser": "angular"
+        }
+      }
+    ]
+  },
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "web-components",
+    "custom-elements",
+    "ui-library",
+    "framework-agnostic"
+  ],
+  "author": "Frontend Architect Course"
+}
