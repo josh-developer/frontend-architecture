@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe solution</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .layout {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+        }
+
+        .left-frame {
+            width: 20%;
+        }
+
+        .content-frame {
+            width: 60%;
+        }
+
+        .right-frame {
+            width: 20%;
+        }
+
+        .footer-frame {
+            width: 100%;
+        }
+
+        .header-frame {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+        <!-- Header iframe -->
+        <iframe src="https://vector-academy.uz" class="header-frame" width="100%" height="15%"></iframe>
+
+        <div class="main-content">
+            <!-- Left sidebar iframe -->
+            <iframe src="https://vector-academy.uz" class="left-frame" width="20%" height="100%"></iframe>
+
+            <!-- Center content iframe -->
+            <iframe src="https://vector-academy.uz" class="content-frame" width="60%" height="100%"></iframe>
+
+            <!-- Right sidebar iframe -->
+            <iframe src="https://vector-academy.uz" class="right-frame" width="20%" height="100%"></iframe>
+        </div>
+
+        <!-- Footer iframe -->
+        <iframe src="https://vector-academy.uz" class="footer-frame" width="100%" height="15%"></iframe>
+    </div>
+</body>
+
+</html>
