@@ -1,48 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Elements</title>
+    <style></style>
 </head>
+
 <body>
     <h1>Custom Elements</h1>
     <my-element></my-element>
-
-    <script>
-        class MyElement extends HTMLElement {
-            constructor() {
-                super();
-                this.innerHTML = "Hello World";
-                this.style.color = "white";
-                this.style.fontSize = "20px";
-                this.style.fontWeight = "bold";
-                this.style.textAlign = "center";
-                this.style.backgroundColor = "blue";
-                this.style.padding = "10px";
-                this.style.borderRadius = "5px";
-                this.style.cursor = "pointer";
-                this.style.transition = "all 0.3s ease";
-                this.style.boxShadow = "0 0 10px 0 rgba(0, 0, 0, 0.5)";
-                this.style.border = "1px solid #000";
-                this.style.margin = "10px";
-                this.style.padding = "10px";
-                this.style.borderRadius = "5px";
-
-                const randomMessages = [
-                    "Enjoying the course?",
-                    "Great job!",
-                    "Keep up the good work!",
-                    "You're doing great!",
-                    "You're a star!",
-                    "You're amazing!",
-                ];
-                this.addEventListener("click", () => {
-                    this.innerHTML = randomMessages[Math.floor(Math.random() * randomMessages.length)];
-                });
-            }
-        }
-        customElements.define("my-element", MyElement);
-    </script>   
+    <script src="script.js"></script>
 </body>
+
 </html>
