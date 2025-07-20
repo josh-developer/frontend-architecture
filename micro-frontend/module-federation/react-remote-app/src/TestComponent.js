@@ -1,14 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { MemoryRouter, Switch, Route, Link } from 'react-router-dom';
+import TestRoute from './Test-route';
 
-const TestComponent = () => {
-   
+function TestComponent() {
     return (
         <>
-            <h1>React Remote Test Web Component</h1>
+            Test            
+            <MemoryRouter>
+            <Link to="/test-route">Test Route</Link>
+                <Switch>
+                    <Route path="/test-route" component={TestRoute} />
+                </Switch>
+            </MemoryRouter>
         </>
     );
-};
+}
+
 
 export default TestComponent;
 
