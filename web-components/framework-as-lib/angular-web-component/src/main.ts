@@ -3,6 +3,8 @@ import { createApplication } from '@angular/platform-browser';
 import { ButtonComponent } from './app/components/button';
 import { InputComponent } from './app/components/input';
 import { AppComponent } from './app/app.component';
+import { Injector } from '@angular/core';
+import { CheckboxComponent } from './app/components/checkbox';
 
 
 
@@ -11,22 +13,23 @@ import { AppComponent } from './app/app.component';
     providers: [],
   });
 
-  const buttonElement = createCustomElement(ButtonComponent, {
-    injector: app.injector
+  const webComponents = [
+    [ButtonComponent, 'my-button'],
+    [InputComponent, 'my-input'],
+    [AppComponent, 'app-root'],
+    [CheckboxComponent, 'my-checkbox'], 
+  ];
+
+  webComponents.forEach(([component, name]: any) => {
+    defineCustomElement(component, name, app.injector);
   });
-
-  customElements.define('my-button', buttonElement);
-
-  const inputElement = createCustomElement(InputComponent, {
-    injector: app.injector,
-  });
-
-  customElements.define('my-input', inputElement);
-
-  const appElement = createCustomElement(AppComponent, {
-    injector: app.injector
-  });
-
-  customElements.define('app-root', appElement);
-
 })();
+
+
+function defineCustomElement(component: any, name: string, injector: Injector) {
+  const element = createCustomElement(component, {
+    injector: injector
+  });
+
+  customElements.define(name, element);
+}

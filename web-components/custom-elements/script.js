@@ -36,4 +36,4 @@ class MyElement extends HTMLElement {
 
     }
 }
-customElements.define("my-element", MyElement);
+customElements.define("alijon-cmp", MyElement);

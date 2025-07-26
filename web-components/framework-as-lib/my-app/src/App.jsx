@@ -23,9 +23,12 @@ function App() {
     <div>
       <h1>Angular Button + Input in React</h1>
 
-      <my-input label="Name" placeholder="Enter your name" ref={inputRef}></my-input>
+      <my-input label="Name" placeholder="Enter your name, bro!" ref={inputRef}></my-input>
 
-      <my-button label="Click Me"></my-button>
+      {/* <my-button label="Click Me"></my-button> */}
+      <br />
+      <br />
+      <my-checkbox label="Checkbox"></my-checkbox>
     </div>
   );
 }

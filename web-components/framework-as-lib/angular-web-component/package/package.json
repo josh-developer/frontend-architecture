@@ -1,6 +1,6 @@
 {
   "name": "test-ng-ui-elements",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Angular web components for UI elements",
   "main": "main.js",
   "files": [
