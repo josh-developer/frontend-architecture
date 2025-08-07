@@ -1,3 +1,4 @@
 [submodule "submodules/vector-academy"]
 	path = submodules/vector-academy
 	url = https://github.com/josh-developer/vector-academy-landing.git
+	branch = main
